@@ -68,5 +68,6 @@ def merge_face(image_url1, image_url2, image_url, number):
 image1 = r"E:\test\img03.jpg"
 image2 = r"E:\test\img04.jpg"
 image = r"E:\test\imgh2.jpg"
+# 3 + 4 == 2
 
 merge_face(image2, image1, image, 90)
