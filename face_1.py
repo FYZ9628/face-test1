@@ -9,8 +9,11 @@ import base64
 def find_face(imgpath):
     print("正在查找……")
     http_url = 'https://api-cn.faceplusplus.com/facepp/v3/detect'
-    data = {"api_key": 'v-LprlX-DKaiPzO_jTs1mQYDl5pkf4cL',
-            "api_secret": 'G_EoNrRdlhPhJa_IfjMIdgQBNBojXbSt',
+    # api_key 和 api_secret 获取地址
+    # 在应用管理的 API Key 下（要先注册）
+    # https://console.faceplusplus.com.cn/
+    data = {"api_key": '自己申请',
+            "api_secret": '自己申请',
             "image_url": imgpath, "return_landmark": 1}
     files = {"image_file": open(imgpath, "rb")}
     response = requests.post(http_url, data=data, files=files)
@@ -44,8 +47,8 @@ def merge_face(image_url1, image_url2, image_url, number):
     f2_64 = base64.b64encode(f2.read())
     f2.close()
 
-    data = {"api_key": 'v-LprlX-DKaiPzO_jTs1mQYDl5pkf4cL',
-            "api_secret": 'G_EoNrRdlhPhJa_IfjMIdgQBNBojXbSt',
+    data = {"api_key": '自己申请',
+            "api_secret": '自己申请',
             "template_base64": f1_64, "template_rectangle": rectangle1,
             "merge_base64": f2_64, "merge_rectangle": rectangle2, "merge_rate": number}
 
