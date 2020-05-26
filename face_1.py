@@ -3,6 +3,8 @@ import simplejson
 import json
 import base64
 
+# 参考网址 https://www.52pojie.cn/thread-1016974-1-1.html
+# https://console.faceplusplus.com.cn/dashboard
 # 人脸替换技术
 # Face++网址：[url]https://console.faceplusplus.com.cn/dashboard[/url]
 # 第一步，获取人脸关键点
